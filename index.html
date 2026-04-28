@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>William Lycett</title>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+        <link rel = "stylesheet" href = "web.css">
+        <link rel = "stylesheet" href = "https://fonts.googleapis.com/css?family=Lato">
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type = "text/javascript" src = "script.js"></script>
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <div class = "navbar">
+            <div class = "nav-container">
+                <div class = "nav-links" id = "navLinks">
+                    <a href = "#home" class = "logo"><i class="fa fa-home"></i> HOME</a>
+                    <a href = "#about"><i class="fa fa-user"></i> ABOUT</a>
+                    <a href = "#portfolio"><i class="fa fa-th"></i> PORTFOLIO</a>
+                    <a href = "#contact"><i class="fa fa-envelope"></i> CONTACT</a>
+                </div>
+                <div class = "nav-search">
+                    <input type = "text" id = "searchInput" placeholder = "Search" onkeyup = "searchPage()">
+                </div>
+                <button class = "menu-toggle" onclick = "toggleMenu()">
+                    <i class = "fa fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- First parallax image -->
+        <section class = "parallax parallax-1" id = "home">
+            <div class = "parallax-content">
+                <span class = "hero-text searchable">
+                    <i>WILLIAM<span class = "hide-small"> </span>LYCETT</i>
+                </span>
+            </div>
+        </section>
+
+        <!-- About section -->
+        <section class = "about container" id = "about">
+            <h3 class = "text-centre searchable">ABOUT ME</h3>
+            <p class = "text-centre searchable"><em>There is nothing more satisfying than solving a tough problem...</em></p>
+            <p class = "searchable">
+                Welcome to my personal website, where I will introduce myself and display my portfolio of my most recent programming projects. 
+                Everything you see now was created from scratch using HTML, CSS and a bit of JavaScript. Additionally, the webpage reacts 
+                dynamically to the smaller screens of mobile devices, for example by turning off the parallax effect. I am a strong believer of 
+                always learning new things, which is why I will continue to update and improve this website as my scripting skills develop and 
+                my portfolio grows!
+            </p>
+            <div class = "about-row">
+                <div class = "about-col">
+                    <p class = "text-centre searchable">
+                        <b><i class = "fa fa-user"></i> William Lycett</b>
+                    </p>
+                    <img src = "img/profile.jpg" alt = "Photo of Me" class = "profile-img">
+                </div>
+                <div class = "about-col hide-mobile">
+                    <p class = "searchable">
+                        As a Computer Science undergraduate student at Keele University, I am acutely aware of the need for agile problem-solving 
+                        and critical thinking in the modern computing industry. With new technologies arriving at rapid rates each year, those who 
+                        work with them must be adaptable and flexible; traits I strive to display in all facets of my professional career. I will 
+                        be the first to admit that, given my career is just beginning, I am not quite an expert yet, but rest assured I will 
+                        complete any task with grit, determination and a hunger for more knowledge. I will always be happy to learn a new 
+                        technology in order to develop, yet my eye for detail will ensure I won't cease working on a task until it reaches the 
+                        standard I know I'm capable of. In some ways, it is more important that developers and technicians can find out the 
+                        techniques used to implement their ideas, rather than know them inherently. Everyone starts somewhere!
+                    </p>
+                </div>
+            </div>
+            <p class = "skills-title">MY SKILLS</p>
+            <div class = "skill searchable">
+                <p><i class = "fa fa-code"></i> Python</p>
+                <div class = "skill-bar">
+                    <div class = "skill-fill" style = "width:92%">92%</div>
+                </div>
+            </div>
+            <div class = "skill searchable">
+                <p><i class = "fa fa-code"></i> Java</p>
+                <div class = "skill-bar">
+                    <div class = "skill-fill" style = "width:78%">78%</div>
+                </div>
+            </div>
+            <div class = "skill searchable">
+                <p><i class = "fa fa-code"></i> HTML</p>
+                <div class = "skill-bar">
+                    <div class = "skill-fill" style = "width:84%">84%</div>
+                </div>
+            </div>
+            <div class = "skill searchable">
+                <p><i class = "fa fa-code"></i> CSS</p>
+                <div class = "skill-bar">
+                    <div class = "skill-fill" style = "width:80%">80%</div>
+                </div>
+            </div>
+            <div class = "skill searchable">
+                <p><i class = "fa fa-code"></i> JavaScript</p>
+                <div class = "skill-bar">
+                    <div class = "skill-fill" style = "width:75%">75%</div>
+                </div>
+            </div>
+            <div class = "skill searchable">
+                <p><i class = "fa fa-code"></i> SQL</p>
+                <div class = "skill-bar">
+                    <div class = "skill-fill" style = "width:80%">80%</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Second parallax image -->
+        <section class = "parallax parallax-2" id = "portfolio">
+            <div class = "parallax-content">
+                <span class = "hero-text searchable">
+                    <i><span class = "hide-small">PORTFOLIO</span></i>
+                </span>
+            </div>
+        </section>
+
+        <!-- Portfolio section -->
+        <section class = "portfolio container" id = "portfolio">
+            <h3 class = "text-centre">MY PROJECTS</h3>
+            <p class = "text-centre searchable">
+                <em>Below are my most recent projects.<br>Click on the links to go to their GitHub pages.</em>
+            </p>
+            <div class = "projects">
+                <div class = "project-card searchable">
+                    <h4>F1 Race Simulator</h4>
+                    <p>A Python-based race simulation system allowing customisation of drivers, teams and circuits.</p>
+                    <a href = "https://github.com/w-lycett/F1-Race-Simulator" target = "_blank">View on GitHub</a>
+                </div>
+                <div class = "project-card searchable">
+                    <h4>Personal Website</h4>
+                    <p>A responsive portfolio site built from scratch. You're seeing it now!</p>
+                    <a href = "" target = "_blank">View on GitHub</a>
+                </div>
+                <div class = "project-card searchable">
+                    <h4>Bird Migration Pattern Predictor</h4>
+                    <p>A tool for predicting bird migration data for the next year. Created for my A-Level NEA.</p>
+                    <a href = "https://github.com/w-lycett/Bird-Migration-Pattern-Predictor" target = "_blank">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Third parallax image -->
+        <section class = "parallax parallax-3" id = "portfolio">
+            <div class = "parallax-content">
+                <span class = "hero-text searchable">
+                    <i><span class = "hide-small">CONTACT</span></i>
+                </span>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section class = "contact container" id = "contact">
+            <h3 class = "text-centre">MY AREA</h3>
+            <p class = "text-centre"><em>Feel free to get in touch!</em></p>
+            <div class = "contact-row">
+                <div class = "contact-col searchable">
+                    <img src = "img/contact.jpg" alt = "Keele University" class = "contact-img">
+                </div>
+                <div class = "contact-col">
+                    <div class = "contact-info searchable">
+                        <p><i class = "fa fa-map-marker"></i> Keele University, Newcastle-Under-Lyme, UK</p>
+                        <p><i class = "fa fa-phone"></i> +44 7396 374259</p>
+                        <p><i class = "fa fa-envelope"></i> w.lycett100@outlook.com</p>
+                    </div>
+                    <p>Leave me a message:</p>
+                    <form action = "https://formspree.io/f/mwvaaezv" method = "POST" class = "contact-form">
+                        <div class = "form-row">
+                            <input type = "text" name = "Name" placeholder = "Name" required>
+                            <input type = "email" name = "Email" placeholder = "Email" required>
+                        </div>
+                        <input type = "text" name = "Message" placeholder = "Message" required>
+                        <button type = "submit" class = "btn-submit">
+                            <i class = "fa fa-paper-plane"></i> SEND MESSAGE
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class = "footer">
+            <a href = "#home" class = "back-to-top">
+                <i class = "fa fa-arrow-up"></i> To the top
+            </a>
+            <div class = "social-icons searchable">
+                <a href = "https://www.linkedin.com/in/william-lycett-a28592393/"><i class = "fa fa-linkedin"></i></a>
+                <a href = "https://github.com/w-lycett"><i class = "fa fa-github"></i></a>
+            </div>
+            <p class = "footer-text searchable">Website content powered by HTML, CSS and JavaScript</p>
+            <p class = "footer-text searchable">Contact form powered by <a href = "https://formspree.io/" target = "_blank">Formspree</a></p>
+            <p class = "footer-text searchable">Hosted using <a href = "https://docs.github.com/en/pages" target = "_blank">GitHub Pages</a></p>
+        </footer>
+    </body>
+</html>

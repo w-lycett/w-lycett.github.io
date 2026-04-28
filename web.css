@@ -1,0 +1,393 @@
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato", sans-serif;
+}
+
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Parallax effect */
+.parallax {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Parallax content */
+.parallax-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* First image (logo) */
+.parallax-1 {
+    background-image: url("img/parallax1.jpg");
+    min-height: 100%;
+}
+
+/* Styling hero text */
+.hero-text {
+    background: #8f4d13;
+    color: white;
+    padding: 16px 24px;
+    font-size: 24px;
+    letter-spacing: 5px;
+}
+
+.hide-small {
+    display: inline;
+}
+
+@media (max-width: 600px) {
+    .hide-small {
+        display: none;
+    }
+}
+
+/* Second image (portfolio) */
+.parallax-2 {
+    background-image: url("img/parallax2.jpg");
+    min-height: 400px;
+}
+
+/* Third image (contact) */
+.parallax-3 {
+    background-image: url("img/parallax3.jpg");
+    min-height: 400px;
+}
+
+/* Turn off parallax scrolling for mobile devices */
+@media (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll;
+        min-height: 400px;
+    }
+}
+
+/* Navbar container */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar inner layout */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Navbar links */
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+/* Navbar logo */
+.logo {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Navbar search box */
+.nav-search input {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Three bars on navbar for mobile devices*/
+.menu-toggle {
+    display: none;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Navbar styles for mobile devices */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: white;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links a {
+        padding: 15px 0;
+        display: block;
+        border-top: 1px solid #eee;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* About core layout */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 64px 16px;
+}
+
+.text-centre {
+    text-align: center;
+}
+
+.about-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.about-col {
+    flex: 1;
+    min-width: 300px;
+    padding: 16px;
+}
+
+/* About image styling */
+.profile-img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 6px;
+    opacity: 0.8;
+    display: block;
+    margin: auto;
+}
+
+.profile-img:hover {
+    opacity: 1;
+}
+
+/* About skills section */
+.skills-title {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 18px;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill-bar {
+    background: #eee;
+    width: 100%;
+}
+
+.skill-fill {
+    background: #8f4d13;
+    color: white;
+    text-align: center;
+    padding: 4px 0;
+}
+
+/* About section behaviour for mobile devices */
+.hide-mobile {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .about-row {
+        flex-direction: column;
+    }
+
+    .about-col {
+        flex: 0 0 100%;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+}
+
+/* Portfolio section project styling */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card h4 {
+    margin-top: 0;
+}
+
+.project-card p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 14px;
+    background: #000;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact core layout */
+.contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.contact-col {
+    flex: 1;
+    min-width: 300px;
+    padding: 16px;
+}
+
+/* Contact section image styling */
+.contact-img {
+    width: 100%;
+    border-radius: 6px;
+    display: block;
+}
+
+/* Contact info styling */
+.form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.form-row input {
+    flex: 1;
+}
+
+/* Contact section input styling */
+.contact-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.btn-submit {
+    background: black;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    border-radius: 4px;
+}
+
+.btn-submit:hover {
+    background: #333;
+}
+
+/* Contact section behaviour for mobile devices */
+@media (max-width: 768px) {
+    .contact-row {
+        flex-direction: column;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .btn-submit {
+        width: 100%;
+        float: none;
+    }
+}
+
+/* Footer core layout */
+.footer {
+    text-align: center;
+    background: #8f4d13;
+    color: white;
+    padding: 64px 16px;
+}
+
+/* Footer buttons */
+.back-to-top {
+    display: inline-block;
+    background: #eee;
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.back-to-top:hover {
+    background: #ddd;
+}
+
+.social-icons {
+    margin: 20px 0;
+    font-size: 22px;
+}
+
+.social-icons i {
+    margin: 0 8px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.social-icons i:hover {
+    opacity: 0.6;
+}
+
+.social-icons a {
+    color: white;
+}
+
+/* Footer text */
+.footer-text {
+    font-size: 14px;
+}
+
+.footer-text a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
